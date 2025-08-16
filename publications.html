@@ -12,6 +12,7 @@
     }
 
     /* Hero with background + dark overlay */
+    /*
     .hero {
       position: relative;
       height: 100vh; /* full screen */
@@ -20,7 +21,7 @@
       align-items: center;
       justify-content: center;
     }
-
+    */
     /* Dark overlay for transparency */
     /*
     .hero::before {
@@ -40,7 +41,13 @@
       align-items: center;
       justify-content: center;
     }
-
+    .hero::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+    }
     /* Navigation bar */
     nav {
       position: fixed;    /* instead of absolute */
@@ -68,9 +75,6 @@
       font-size: 3rem;
     }
     
-    .hero::before {
-       position: fixed;
-    }
     /* Main content */
     .content {
       max-width: 900px;
