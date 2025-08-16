@@ -29,44 +29,57 @@
       justify-content: center;
     }
 
-    .hero::before {
+/* keep your existing body, .hero, nav, etc. */
+
+/* 1) Limit the dim overlay to the hero, not the whole page */
+.hero::before {
   content: "";
-  position: absolute; /* instead of fixed */
+  position: absolute;            /* CHANGED: was fixed */
   inset: 0;
-  background: rgba(0, 0, 0, 0.8); /* dim layer */
-  z-index: 0; /* sit behind hero content */
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;                    /* behind hero content */
 }
 
+/* 2) Make sure the hero is the positioning context for ::before */
 .hero {
-  position: relative; /* so ::before is relative to hero only */
+  position: fixed;               /* keep as you had */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* 3) Keep nav above the overlay */
 nav {
   position: fixed;
   top: 20px;
   right: 30px;
-  z-index: 2; /* above overlay */
+  z-index: 3;                    /* CHANGED: was 1 */
 }
 
+/* 4) Put main content above the hero overlay and below the fixed nav,
+      and push it down so it starts below the 100vh hero */
 .content {
   max-width: 900px;
   margin: 2rem auto;
+  margin-top: calc(100vh + 2rem);/* NEW: start below the fixed hero */
   padding: 0 1rem;
   line-height: 1.6;
   color: white;
   background: transparent;
-  position: relative;
-  z-index: 1; /* ensure above background */
+  position: relative;            /* NEW: so z-index applies */
+  z-index: 2;                    /* above overlay */
 }
 
+/* 5) Footer above overlay as well */
 footer {
   text-align: center;
   font-size: 0.9em;
   color: white;
   margin: 3rem 0;
   background: transparent;
-  position: relative;
-  z-index: 1;
+  position: relative;            /* NEW */
+  z-index: 2;                    /* NEW */
 }
 
 
