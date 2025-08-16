@@ -29,46 +29,57 @@
       justify-content: center;
     }
 
-/* keep your existing body, .hero, nav, etc. */
-
-/* 1) Limit the dim overlay to the hero, not the whole page */
-.hero::before {
-  content: "";
-  position: absolute;            /* CHANGED: was fixed */
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 0;                    /* behind hero content */
-}
-
-/* 2) Make sure the hero is the positioning context for ::before */
+/* 1) Make sure the hero overlay actually dims the top section */
 .hero {
-  position: fixed;               /* keep as you had */
+  position: fixed;          /* keep your fixed hero */
+  top: 0; left: 0; right: 0;/* ensure it covers the viewport */
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;               /* create a stacking context above body bg */
 }
 
-/* 3) Keep nav above the overlay */
+.hero::before {
+  content: "";
+  position: absolute;       /* limit overlay to the hero only */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8); /* dim */
+  z-index: 0;               /* behind hero content, above body */
+}
+
+/* 2) Keep the nav fixed and on top of the overlay */
 nav {
   position: fixed;
   top: 20px;
   right: 30px;
-  z-index: 3;                    /* CHANGED: was 1 */
+  z-index: 3;               /* above the dim overlay */
 }
 
-/* 4) Put main content above the hero overlay and below the fixed nav,
-      and push it down so it starts below the 100vh hero */
+/* 3) Restore your link styles EXACTLY (place these AFTER any other nav/link rules) */
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #ffd700; /* gold hover */
+}
+
+/* 4) Ensure main content starts below the fixed hero and is above the overlay */
 .content {
   max-width: 900px;
   margin: 2rem auto;
-  margin-top: calc(100vh + 2rem);/* NEW: start below the fixed hero */
+  margin-top: calc(100vh + 2rem); /* push below the fixed hero */
   padding: 0 1rem;
   line-height: 1.6;
   color: white;
   background: transparent;
-  position: relative;            /* NEW: so z-index applies */
-  z-index: 2;                    /* above overlay */
+  position: relative;
+  z-index: 2;               /* above the hero overlay */
 }
 
 /* 5) Footer above overlay as well */
@@ -78,8 +89,8 @@ footer {
   color: white;
   margin: 3rem 0;
   background: transparent;
-  position: relative;            /* NEW */
-  z-index: 2;                    /* NEW */
+  position: relative;
+  z-index: 2;
 }
 
 
