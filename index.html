@@ -10,53 +10,46 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Hero section with background image */
-    /* Hero stays the same */
-.hero {
-  position: relative;
-  height: 80vh;
-  background: url('assets/banner.png') no-repeat center center/cover;
-}
 
-/* Navbar overlay across the top of the hero */
-.navbar {
-  position: absolute;
-  top: 0; left: 0; right: 0;      /* full width */
-  display: flex;
-  align-items: center;            /* vertical align */
-  justify-content: flex-start;    /* start; we'll push links with margin-left:auto */
-  padding: 20px 40px;
-}
+    .hero {
+      position: relative;
+      height: 80vh; /* top 2/3 of viewport */
+      background: url('assets/banner.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
 
-/* Non-clickable lab name on the left */
-.logo {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: black;                   /* black text as requested */
-}
+    /* Navigation bar */
+    nav {
+    /*  position: absolute;
+      top: 20px;
+      right: 30px;
+    */
+      display: flex;
+      justify-content: space-between; /* logo left, links right */
+      align-items: center;
+      padding: 20px 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-/* Links container on the right */
-.nav-links {
-  margin-left: auto;              /* pushes this block to the right */
-  display: flex;
-  gap: 20px;                      /* spacing between buttons */
-}
-
-/* Link styling */
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 1.25rem;
-  padding: 10px 14px;
-  border-radius: 6px;             /* optional: makes them look like buttons */
-  transition: background 0.2s, color 0.2s;
-}
-.nav-links a:hover {
-  background: rgba(0,0,0,0.06);
-}
-    /* Main content below hero */
+    nav a:hover {
+      color: #ffd700; /* gold hover */
+    }
+    
+/* Main content below hero */
     .content {
       max-width: 900px;
       margin: 2rem auto;
@@ -78,8 +71,6 @@
 </head>
 <body>
   <header class="hero">
-    <h1 class="logo">Anstine Research Lab</h1>
-
     <!-- Nav bar overlaid on hero image -->
     <nav>
       <a href="#Home">Home</a>
