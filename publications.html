@@ -8,6 +8,18 @@
   html {
     scroll-padding-top: 100px; /* adjust this to your nav height */
   }
+  :root {
+    --nav-offset: 100px; /* adjust to your nav’s height */
+  }
+  /* make sure content clears the nav */
+  .content {
+    padding-top: var(--nav-offset);
+  }
+
+  /* if you also link to #publications */
+  #publications {
+    scroll-margin-top: var(--nav-offset);
+  }
    /*
     body {
       margin: 0;
