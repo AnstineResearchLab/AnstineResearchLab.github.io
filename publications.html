@@ -2,31 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Publications | Anstine Research Lab</title>
+  <title>Publications | Your Lab Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css"> <!-- if you moved CSS into a separate file -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Hero with background + dark overlay */
+    .hero {
+      position: relative;
+      height: 100vh; /* full screen */
+      background: url('assets/banner.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Dark overlay for transparency */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8); /* 80% transparent black */
+      z-index: 1;
+    }
+
+    /* Navigation bar */
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      z-index: 2; /* above overlay */
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Content on hero */
+    .hero h1 {
+      position: relative;
+      z-index: 2; /* above overlay */
+      font-size: 3rem;
+    }
+
+    /* Main content */
+    .content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+      color: black; /* switch back to black text below hero */
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin: 3rem 0;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero" style="height: 30vh; background: url('assets/banner.png') no-repeat center/cover;">
-    <div class="navbar">
-      <h1 class="logo">Your Lab Name</h1>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="people.html">People</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+  <header class="hero">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">The Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <h1>Our Publications</h1>
   </header>
 
   <main class="content">
-    <h2>Publications</h2>
-    <ul>
-      <li>Author, A., Author, B. (2025). <em>Cool Paper Title</em>. Journal of Interesting Results.</li>
-      <li>Author, C., Author, D. (2024). <em>Another Paper</em>. Conference on Science.</li>
-      <li>Author, E. (2023). <em>Yet Another Paper</em>. Big Journal.</li>
-    </ul>
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>Author, A., Author, B. (2025). <em>Cool Paper Title</em>. Journal of Interesting Results.</li>
+        <li>Author, C., Author, D. (2024). <em>Another Paper</em>. Conference on Science.</li>
+        <li>Author, E. (2023). <em>Yet Another Paper</em>. Big Journal.</li>
+      </ul>
+    </section>
   </main>
+
+  <footer>
+    <p>© 2025 Anstine Research Lab</p>
+  </footer>
 </body>
 </html>
