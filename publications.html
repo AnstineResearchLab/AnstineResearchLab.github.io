@@ -41,7 +41,7 @@
       position: fixed;    /* instead of absolute */
       top: 20px;
       right: 30px;
-      z-index: 1000;      /* make sure it stays above content */
+      z-index: 1;      /* make sure it stays above content */
    }
 
     nav a {
@@ -70,6 +70,8 @@
   line-height: 1.6;
   color: white;              /* make text white */
   background: transparent;   /* no background */
+  z-index: 2;      /* make sure it stays above content */
+
 }
 
 section {
@@ -82,6 +84,8 @@ footer {
   color: white;              /* footer text white too */
   margin: 3rem 0;
   background: transparent;   /* ensure footer has no background */
+  z-index: 3;      /* make sure it stays above content */
+
 }
   </style>
 </head>
