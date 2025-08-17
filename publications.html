@@ -5,21 +5,7 @@
   <title>Publications | Your Lab Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-  html {
-    scroll-padding-top: 100px; /* adjust this to your nav height */
-  }
-  :root {
-    --nav-offset: 100px; /* adjust to your nav’s height */
-  }
-  /* make sure content clears the nav */
-  .content {
-    padding-top: var(--nav-offset);
-  }
 
-  /* if you also link to #publications */
-  #publications {
-    scroll-margin-top: var(--nav-offset);
-  }
    /*
     body {
       margin: 0;
@@ -103,7 +89,8 @@ nav a:hover {
   max-width: 900px;
   /*margin: 2rem auto;*/
   margin: 6rem auto 2rem auto; /* adds space at the top */
-  padding: 0 1rem;
+  /*padding: 0 1rem;*/
+  padding: 120px 1rem 0; /* top padding keeps text away from nav */
   line-height: 1.6;
   color: white;
   background: transparent;
