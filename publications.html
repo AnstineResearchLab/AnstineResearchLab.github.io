@@ -119,15 +119,19 @@ footer {
   </style>
 </head>
 <body>
-  <header class="hero">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="people.html">The Team</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-  </header>
+  <!-- Move nav OUTSIDE hero -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="people.html">The Team</a>
+    <a href="publications.html">Publications</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <!-- Keep hero just for your background/overlay stuff -->
+  <header class="hero"></header>
+
+  <!-- Your content -->
   <main class="content">
     <section id="publications">
       <h2>MSU Publications</h2>
