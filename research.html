@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research | Anstine Research Lab<</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: black;
+    }
+
+
+    .hero {
+      position: relative;
+      height: 60vh; /* top 2/3 of viewport */
+      background: url('assets/banner.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 0.5;
+    }
+
+    .hero-text {
+      background: rgba(0, 0, 0, 0.6); /* black with 80% opacity */
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 750px;
+      opacity: 0; /* start invisible */
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.3s; /* optional, adds a short pause before animating */
+    }
+    
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;               /* move anchor point to middle of page */
+      transform: translateX(-50%); /* shift back by half its width */
+      display: flex;
+      gap: 20px;               /* keeps spacing consistent */
+    }
+    
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700; /* gold hover */
+    }
+
+    .team-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .member-info h2 {
+      margin: 0 0 0.5rem;
+    }
+
+    .member-info p {
+      margin: 0.25rem 0;
+      line-height: 1.4;
+    }
+    
+/* Main content below hero */
+    .content {
+      /*margin: 2rem auto;
+      padding: 0 1rem;*/
+      text-align: center;
+      line-height: 0.5;
+    }
+
+    .join_text {
+      max-width: 1000px;
+      margin: 2rem auto;
+      text-align: justify;
+      line-height: 1.3;
+      font-size: 1.25em;
+      opacity: 0; /* start invisible */
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.3s; /* optional, adds a short pause before animating */
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #555;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <!-- Nav bar overlaid on hero image -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#Research">Research</a>
+      <a href="team.html">The Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Get Connected</a>
+    </nav>
+
+  <div class="hero-text">
+    <h1>Computing a Better Future</h1>
+  </div>    
+    
+  </header>
+
+  <main class="team-container">
+    <div class="team-member">
+      <img src="assets/anstine_headshot.jpg" alt="Person 1">
+      <div class="member-info">
+        <h2>Dr. Dylan Anstine</h2>
+        <p><b>Principal Investigator</b></p>
+        <p>Research focus on computational chemistry, sustainable polymers, and chemical transformations.</p>
+      </div>
+    </div>
+  
+  <main class="content">
+      <h2>Contact</h2>
+      <address>
+      <p>email: <a href="mailto:anstined@msu.edu">anstined@msu.edu</a></p>
+      <p>Dylan M. Anstine, Ph.D.</p>
+      <p>Dept. of Chem. Engineering and Mat. Science</p>
+      <p>Michigan State University</p>
+      <p>428 S. Shaw Lane, Room 1248</p>
+      <p>East Lansing, Michigan 48824-1226</p>
+      </address>
+  </main>
+
+  <footer>
+    <p>© 2025 Anstine Research Lab</p>
+  </footer>
+</body>
+</html>
