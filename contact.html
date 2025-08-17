@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Lab Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+    }
+
+
+    .hero {
+      position: relative;
+      height: 30vh; /* top 2/3 of viewport */
+      background: url('assets/banner.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 0.5;
+    }
+
+    .hero-text {
+      background: rgba(0, 0, 0, 0.6); /* black with 80% opacity */
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 750px;
+      opacity: 0; /* start invisible */
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.3s; /* optional, adds a short pause before animating */
+    }
+    
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;               /* move anchor point to middle of page */
+      transform: translateX(-50%); /* shift back by half its width */
+      display: flex;
+      gap: 20px;               /* keeps spacing consistent */
+    }
+    
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700; /* gold hover */
+    }
+    
+/* Main content below hero */
+    .content {
+      /*margin: 2rem auto;
+      padding: 0 1rem;*/
+      text-align: center;
+      line-height: 0.5;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #555;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <!-- Nav bar overlaid on hero image -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#Research">Research</a>
+      <a href="#Team">The Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="#Contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="content">
+      <h2>Contact</h2>
+      <address>
+      <p>email: <a href="mailto:anstined@msu.edu">anstined@msu.edu</a></p>
+      <p>Dylan M. Anstine, Ph.D.</p>
+      <p>Dept. of Chem. Engineering and Mat. Science</p>
+      <p>Michigan State University</p>
+      <p>428 S. Shaw Lane, Room 1248</p>
+      <p>East Lansing, Michigan 48824-1226</p>
+      </address>
+  </main>
+
+  <footer>
+    <p>© 2025 Anstine Research Lab</p>
+  </footer>
+</body>
+</html>
