@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Anstine Research Lab<</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: black;
+    }
+
+
+    .hero {
+      position: relative;
+      height: 60vh; /* top 2/3 of viewport */
+      background: url('assets/banner.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 0.5;
+    }
+
+    .hero-text {
+      background: rgba(0, 0, 0, 0.6); /* black with 80% opacity */
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 750px;
+      opacity: 0; /* start invisible */
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.3s; /* optional, adds a short pause before animating */
+    }
+    
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;               /* move anchor point to middle of page */
+      transform: translateX(-50%); /* shift back by half its width */
+      display: flex;
+      gap: 20px;               /* keeps spacing consistent */
+    }
+    
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700; /* gold hover */
+    }
+    
+/* Main content below hero */
+    .content {
+      /*margin: 2rem auto;
+      padding: 0 1rem;*/
+      text-align: center;
+      line-height: 0.5;
+    }
+
+    .join_text {
+      max-width: 1000px;
+      margin: 2rem auto;
+      text-align: justify;
+      line-height: 1.3;
+      font-size: 1.25em;
+      opacity: 0; /* start invisible */
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.3s; /* optional, adds a short pause before animating */
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #555;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <!-- Nav bar overlaid on hero image -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#Research">Research</a>
+      <a href="#Team">The Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Get Connected</a>
+    </nav>
+
+  <div class="hero-text">
+    <h1>Looking to Join Us?</h1>
+  </div>    
+    
+  </header>
+
+  <main class="join_text">
+      <p><b>The Anstine Lab is currently recruiting</b> dedicated and creative computational chemists, chemical engineers, 
+         materials scientists, and computer scientists. Anstine Lab group members are expected to be excited about 
+        sustainability, decarbonization, chemical transformations, and/or polymer science. <em><b>Advanced computer 
+        programming skills are encouraged but are not required so long as the prospective researcher is eager to learn!</b></em></p>
+      <p><b>If you are an interested prospective researcher, please contact Dr. Anstine directly via email: <a href="mailto:anstined@msu.edu">anstined@msu.edu</a></b></p>
+    <ul>
+      <li>
+        <p>	  <b>Future graduate students</b> should plan to apply through <b><a href="https://engineering.msu.edu/about/departments/chems">Michigan State University’s Department of Chemical 
+              Engineering and Materials Science</a></b>. In your application, please indicate the Anstine Lab on your interest form. 
+              During the application process, you are encouraged to indicate your topic interest and send a summary 1-page 
+              CV to Dr. Anstine’s email.</p>
+      </li>
+      <li>
+        <p>	<b>Current MSU graduate students</b> are encouraged to consider joining the Anstine research group. 
+            You can schedule a meeting with Dr. Anstine via his email.</p>
+      </li>
+
+      <li>
+        <p>	<b>Prospective postdoctoral researchers</b> will be considered on a case-by-case basis. Applications are 
+            handled directly by Dr. Anstine, and you will be expected to provide a CV and 3 professional references.</p>
+      </li>
+
+      <li>
+        <p>	<b>Undergraduate students</b> are particularly encouraged to contact Dr. Anstine about research opportunities, as 
+            he strongly believes their education and involvement is an important component of a successful chemical 
+            engineering and materials science laboratory.</p>
+      </li>
+      
+    </ul>
+  </main>
+  
+  <main class="content">
+      <h2>Contact</h2>
+      <address>
+      <p>email: <a href="mailto:anstined@msu.edu">anstined@msu.edu</a></p>
+      <p>Dylan M. Anstine, Ph.D.</p>
+      <p>Dept. of Chem. Engineering and Mat. Science</p>
+      <p>Michigan State University</p>
+      <p>428 S. Shaw Lane, Room 1248</p>
+      <p>East Lansing, Michigan 48824-1226</p>
+      </address>
+  </main>
+
+  <footer>
+    <p>© 2025 Anstine Research Lab</p>
+  </footer>
+</body>
+</html>
