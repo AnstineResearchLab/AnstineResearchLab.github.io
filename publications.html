@@ -99,6 +99,13 @@ nav a:hover {
   /*margin-top: 2rem;*/ /* keep a little breathing room but start near top */
 }
 
+
+.content-wrapper {
+  flex: 1;
+  overflow-y: auto;            /* scrolling happens inside here */
+  padding-top: 100px;          /* push text down below nav */
+  scroll-padding-top: 100px;   /* ceiling for anchor links too */
+}
     
 /* 5) Footer above overlay as well */
 footer {
@@ -125,7 +132,7 @@ footer {
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
-
+  <div class="content-wrapper">
   <main class="content">
     <section id="publications">
       <h2>MSU Publications</h2>
@@ -306,7 +313,7 @@ footer {
       </ol>
     </section>
   </main>
-
+  </div>
   <footer>
     <p>© 2025 Anstine Research Lab</p>
   </footer>
