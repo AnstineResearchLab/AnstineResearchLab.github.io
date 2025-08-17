@@ -78,6 +78,9 @@ nav a {
   color: white;
   font-size: 1.25rem;
   font-weight: bold;
+  background: rgba(0, 0, 0, 0.6); /* 60% transparent black */
+  padding: 0.5rem 1rem;
+  border-radius: 8px; /* optional: rounded edges */
   transition: color 0.3s ease;
 }
 nav a:hover {
@@ -97,13 +100,6 @@ nav a:hover {
   /*margin-top: 2rem;*/ /* keep a little breathing room but start near top */
 }
 
-
-.content-wrapper {
-  flex: 1;
-  overflow-y: auto;            /* scrolling happens inside here */
-  padding-top: 100px;          /* push text down below nav */
-  scroll-padding-top: 100px;   /* ceiling for anchor links too */
-}
     
 /* 5) Footer above overlay as well */
 footer {
